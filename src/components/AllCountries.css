@@ -1,0 +1,11 @@
+.countries {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+ul {
+  font-size: 12px;
+}

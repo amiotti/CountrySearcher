@@ -1,0 +1,6 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: hsl(209, 23%, 22%);
+}
