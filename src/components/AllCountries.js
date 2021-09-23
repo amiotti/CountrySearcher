@@ -11,7 +11,7 @@ function AllCountries({ countries, search, filteredCountries }) {
         flags={e.flags}
         name={e.name}
         population={e.population}
-        region={e.region}
+        continent={e.continent}
         capital={e.capital}
         key={e.alpha3Code}
       />
@@ -22,7 +22,7 @@ function AllCountries({ countries, search, filteredCountries }) {
         flags={e.flags}
         name={e.name}
         population={e.population}
-        region={e.region}
+        continent={e.continent}
         capital={e.capital}
         key={e.alpha3Code}
       />
@@ -33,7 +33,7 @@ function AllCountries({ countries, search, filteredCountries }) {
         flags={e.flags}
         name={e.name}
         population={e.population}
-        region={e.region}
+        continent={e.continent}
         capital={e.capital}
         key={e.alpha3Code}
       />

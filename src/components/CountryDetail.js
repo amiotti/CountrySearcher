@@ -5,15 +5,25 @@ import { BrowserRouter as Link } from "react-router-dom";
 import Borders from "./Borders";
 
 function CountryDetail({ props, filterBorders, borders }) {
+  //for BACK button...
   const history = useHistory();
   const handleOnClick = () => history.push("/");
 
   function filterBoarder(props, filterBorders) {
-    let name = props.borders.map((country) => country);
+    if (props.borders) {
+      const name = props.borders.map((country) => country);
 
-    borders = filterBorders(name);
-    return borders;
-    // console.log(borders[0][0].name);
+      borders = filterBorders(name);
+      return borders;
+    } else return "N/A";
+  }
+  //handler for params which are empty or doesn´t exist
+  function handler(param) {
+    if (param) {
+      return param;
+    } else {
+      return "N/A";
+    }
   }
 
   return (
@@ -52,7 +62,7 @@ function CountryDetail({ props, filterBorders, borders }) {
           </ul>
           <ul>
             <span style={{ fontWeight: "bold" }}>Currencies:</span>
-            {props.currencies.map((cur) => ` ${cur.name}`)}
+            {handler(props.currencies).map((curr) => ` ${curr.name}, `)}
           </ul>
           <ul>
             <span style={{ fontWeight: "bold" }}>Language:</span>

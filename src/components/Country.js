@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Country.css";
 
-function Country({ flags, name, population, region, capital }) {
+function Country({ flags, name, population, continent, capital }) {
   return (
     <div className="country">
       <img src={flags[0]} className="flags"></img>
@@ -11,7 +11,7 @@ function Country({ flags, name, population, region, capital }) {
           <ul>{name}</ul>
         </Link>
         <ul>Population:{population}</ul>
-        <ul>Region:{region}</ul>
+        <ul>Continent:{continent}</ul>
         <ul>Capital:{capital}</ul>
       </div>
     </div>
