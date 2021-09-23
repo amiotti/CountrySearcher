@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Country from "./Country";
 import "./AllCountries.css";
 
@@ -8,34 +8,34 @@ function AllCountries({ countries, search, filteredCountries }) {
   if (search.length === filteredCountries.length) {
     pais = countries.map((e) => (
       <Country
-        flag={e.flag}
+        flags={e.flags}
         name={e.name}
         population={e.population}
         region={e.region}
         capital={e.capital}
-        id={parseInt(e.callingCodes)}
+        key={e.alpha3Code}
       />
     ));
   } else if (search.length !== 0) {
     pais = search.map((e) => (
       <Country
-        flag={e.flag}
+        flags={e.flags}
         name={e.name}
         population={e.population}
         region={e.region}
         capital={e.capital}
-        id={parseInt(e.callingCodes)}
+        key={e.alpha3Code}
       />
     ));
   } else if (filteredCountries.length !== 0) {
     pais = filteredCountries.map((e) => (
       <Country
-        flag={e.flag}
+        flags={e.flags}
         name={e.name}
         population={e.population}
         region={e.region}
         capital={e.capital}
-        id={parseInt(e.callingCodes)}
+        key={e.alpha3Code}
       />
     ));
   }

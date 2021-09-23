@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Country.css";
 
-function Country({ flag, name, population, region, capital }) {
+function Country({ flags, name, population, region, capital }) {
   return (
     <div className="country">
-      <img src={flag} className="flags"></img>
+      <img src={flags[0]} className="flags"></img>
       <div className="info">
         <Link to={`/country/${name}`}>
           <ul>{name}</ul>
