@@ -1,7 +1,6 @@
 import React from "react";
 import "./CountryDetail.css";
 import { useHistory } from "react-router-dom";
-import { BrowserRouter as Link } from "react-router-dom";
 import Borders from "./Borders";
 
 function CountryDetail({ props, filterBorders, borders }) {
@@ -36,7 +35,11 @@ function CountryDetail({ props, filterBorders, borders }) {
       <div className="datactn">
         <img src={props.flags[0]} className="flag"></img>
         <div className="firstcol">
-          <ul style={{ fontWeight: "bold", fontSize: "25px" }}>{props.name}</ul>
+          <div>
+            <ul style={{ fontWeight: "bold", fontSize: "25px" }}>
+              {props.name}
+            </ul>
+          </div>
           <ul>
             <span style={{ fontWeight: "bold" }}>Native Name:</span>{" "}
             {" " + props.nativeName}

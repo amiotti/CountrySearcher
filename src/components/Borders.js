@@ -1,5 +1,4 @@
 import React from "react";
-import CountryDetail from "./CountryDetail";
 import { Link } from "react-router-dom";
 
 function Borders({ filterBoarder }) {

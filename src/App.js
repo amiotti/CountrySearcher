@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Navbar from "./components/Navbar";
 import AllCountries from "./components/AllCountries";
-
 import CountryDetail from "./components/CountryDetail";
 
 function App() {
