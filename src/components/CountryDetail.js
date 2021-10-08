@@ -33,7 +33,7 @@ function CountryDetail({ props, filterBorders, borders }) {
         </button>
       </div>
       <div className="datactn">
-        <img src={props.flags[0]} className="flag"></img>
+        <img src={props.flags["svg"]} className="flag"></img>
         <div className="firstcol">
           <div>
             <ul style={{ fontWeight: "bold", fontSize: "25px" }}>

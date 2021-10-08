@@ -8,10 +8,10 @@ function AllCountries({ countries, search, filteredCountries }) {
   if (search.length === filteredCountries.length) {
     pais = countries.map((e) => (
       <Country
-        flags={e.flags}
+        flags={e.flags["svg"]}
         name={e.name}
         population={e.population}
-        continent={e.continent}
+        continent={e.region}
         capital={e.capital}
         key={e.alpha3Code}
       />
@@ -19,10 +19,10 @@ function AllCountries({ countries, search, filteredCountries }) {
   } else if (search.length !== 0) {
     pais = search.map((e) => (
       <Country
-        flags={e.flags}
+        flags={e.flags["svg"]}
         name={e.name}
         population={e.population}
-        continent={e.continent}
+        continent={e.region}
         capital={e.capital}
         key={e.alpha3Code}
       />
@@ -30,10 +30,10 @@ function AllCountries({ countries, search, filteredCountries }) {
   } else if (filteredCountries.length !== 0) {
     pais = filteredCountries.map((e) => (
       <Country
-        flags={e.flags}
+        flags={e.flags["svg"]}
         name={e.name}
         population={e.population}
-        continent={e.continent}
+        continent={e.region}
         capital={e.capital}
         key={e.alpha3Code}
       />

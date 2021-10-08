@@ -43,33 +43,33 @@ function App() {
     switch (status) {
       case "Americas":
         setFilteredCountries(
-          countries.filter((country) => country.continent === "Americas")
+          countries.filter((country) => country.region === "Americas")
         );
         console.log(filteredCountries);
         break;
       case "Asia":
         setFilteredCountries(
-          countries.filter((country) => country.continent === "Asia")
+          countries.filter((country) => country.region === "Asia")
         );
         break;
       case "Africa":
         setFilteredCountries(
-          countries.filter((country) => country.continent === "Africa")
+          countries.filter((country) => country.region === "Africa")
         );
         break;
       case "Europe":
         setFilteredCountries(
-          countries.filter((country) => country.continent === "Europe")
+          countries.filter((country) => country.region === "Europe")
         );
         break;
       case "Oceania":
         setFilteredCountries(
-          countries.filter((countries) => countries.continent === "Oceania")
+          countries.filter((countries) => countries.region === "Oceania")
         );
         break;
       case "All":
         setFilteredCountries(
-          countries.filter((countries) => countries.continent === "All")
+          countries.filter((countries) => countries.region === "All")
         );
         break;
     }

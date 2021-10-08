@@ -5,7 +5,7 @@ import "./Country.css";
 function Country({ flags, name, population, continent, capital }) {
   return (
     <div className="country">
-      <img src={flags[0]} className="flags"></img>
+      <img src={flags} className="flags"></img>
       <div className="info">
         <Link to={`/country/${name}`}>
           <ul>{name}</ul>
